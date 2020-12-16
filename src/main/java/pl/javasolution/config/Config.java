@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import pl.javasolution.api.IOrder;
 import pl.javasolution.api.IPizza;
+import pl.javasolution.implementation.ExoticPizza;
 import pl.javasolution.implementation.GoodPizza;
 import pl.javasolution.implementation.Order;
 
@@ -11,7 +12,7 @@ import pl.javasolution.implementation.Order;
 public class Config {
     @Bean
     public IPizza pizza() {
-        return new GoodPizza(15, "Dobra");
+        return new ExoticPizza(17, "Exotic");
     }
 
     @Bean (name = "inna")
